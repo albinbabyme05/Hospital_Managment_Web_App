@@ -1,0 +1,57 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+.DS_Store
+
+# Environment variables:
+.env
+*.env
+
+# Django migrations
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.pyd
+*/migrations/*.log
+
+# Media files
+media/
+staticfiles/
+
+# Unit test / coverage reports:
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS files
+.DS_Store
+Thumbs.db
