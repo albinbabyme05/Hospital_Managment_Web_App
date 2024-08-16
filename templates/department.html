@@ -7,5 +7,12 @@ Department
 
 
 {% block content %}
-<h1>Department Page</h1>
+<h1>Our Department Page</h1>
+<hr>
+{% for d in dept %}
+<div class="mx-auto w-50 bg-success text-center text-white p-3 my-5 border border-warning rounded">
+    <h1>{{d.departmentName}}</h1>
+    <h5>{{d.departmentSummary}}</h5>
+</div>
+{% endfor %}
 {% endblock %}
