@@ -24,6 +24,7 @@ def booking(request):
         #Need To validate csrf_token, form, emial_field_other required.
         if form.is_valid():
             form.save()
+            return render(request, 'confirmation.html')
     else:   
         form = BookingForm()
     dict_form = {
