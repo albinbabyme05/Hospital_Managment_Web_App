@@ -6,6 +6,9 @@ from django.http import HttpResponse
 from .models import Departments
 from .models import Doctors
 
+#import form
+from .forms import BookingForm
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -16,7 +19,17 @@ def about(request):
 
 
 def booking(request):
-    return render(request, 'booking.html')
+    if request.POST:
+        form = BookingForm(request.POST)
+        #Need To validate csrf_token, form, emial_field_other required.
+        if form.is_valid():
+            form.save()
+    else:   
+        form = BookingForm()
+    dict_form = {
+        'form' : form
+    }
+    return render(request, 'booking.html', dict_form)
 
 
 def doctors(request):
